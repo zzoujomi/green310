@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,4 +115,122 @@ div{text-align: center;}
 
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 구글폰트 연결 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <!-- 내부스타일시트 -->
+    <style>
+
+
+/*  웹폰트를 사용하여 모든 pc에서 확인할 수 있게하겠다. */
+*{font-family: 'Jua', sans-serif;}
+legend{font-weight: 600;padding: 10;}
+
+fieldset{margin-bottom: 50px;
+padding: 20px;}
+
+label{padding-right: 20px;}
+.name{padding-left: 20px;}
+
+/* 후손자방식 */
+ul label{color: green;}
+/* 자손자방식 */
+ul>li>label{
+    width: 100px;display: inline-block;
+    text-align: right;
+}
+ul{list-style: none;}
+li{margin-bottom: 10px;}
+div{text-align: center;}
+
+
+</style>
+</head>
+
+<body>
+    <!-- 개인작업 -->
+
+
+    <!-- 공동작업_선생님과 함께 -->
+<h1>겨울방학특강신청</h1>
+<form action="" method="">
+<fieldset>
+    <legend>수강신청인</legend>
+<label for="schoolNum">학번</label> <input type="text" id="schoolNum" required autofocus>
+<!--  -->
+<label for="name" class="name">이름</label> <input type="text" id=""> 
+
+<fieldset>
+    <ul>
+        <li>
+            <label for=""></label>
+            <label for=""></label>
+        </li>
+        <li>
+            <label for="sub">신청과목(회화)</label>
+            <input type="radio" name="eng">
+            <span>영어회화(초급)</span>
+            <input type="radio" name="eng">
+            <span>영어회화(중급)</span>
+            <input type="radio" name="eng">
+            <span>영어회화(고급)</span>
+        </li>
+        <li>
+            <label for="step"> 신청과목(자격)</label>
+            <input type="radio" name="class">
+            <span>토익</span>
+            <input type="radio" name="class">
+            <span>토플</span>
+            <input type="radio" name="class">
+            <span>오픽</span>
+        </li>
+        <li>
+            <label for="like">관심분야</label>
+            <input type="checkbox" id="like">
+            <span>문법</span>
+            <input type="radio" id="class">
+            <span>vocavirary</span>
+            <input type="radio" id="class">
+            <span>회화</span>
+            <input type="radio" id="class">
+            <span>리스닝</span>
+            <input type="radio" id="class">
+            <span>뉴스청취</span>
+            <input type="radio" id="class">
+            <span>독해</span>
+        </li>
+            </ul>
+            <fieldset> 
+                <ul>
+                    <li><label for="week">개강중
+                    </label>
+                <input type="wee" id="week"></li>
+                <li>
+                    <label for="time">
+                        강의시간
+                    </label>
+                    <input type="time" id="time">
+                </li>
+                </ul>
+            </fieldset>
+</fieldset>
+
+<div>
+    <input type="submit" value="수강신청">
+    <input type="reset" value="다시쓰기">
+</div>
+
+
+</body>
+>>>>>>> 48bf139306320a082c426464904f07d0cf5a24fe
 </html>
