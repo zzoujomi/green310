@@ -61,3 +61,75 @@ flex-direction: column-reverse;}
 
     .box003 li{border: 1px solid #000;
         padding: 10px;}
+
+/* position 예제 */
+.box004{background-color: rgb(201, 154, 245);
+display: flex;
+height: 200px; position: relative;}
+
+.box004 p{width: 200px;
+height: 200px;
+border: 1px solid #000;}
+
+.box004 p:nth-child(1){position: relative;}
+.box004 p:nth-child(2){position:absolute;
+left: 200px;
+top: 0px;}
+.box004 p:nth-child(3){position: fixed;
+top: 0;
+left 0;}
+
+.box005{background-color: aqua;
+height: 500px;
+margin-top: 20px;
+position: relative;}
+
+/* 가운데로 보내는법 */
+.box005 p:nth-child(1){width: 200px;
+height: 200px;
+background-color: bisque;
+position: absolute; left: 50%;
+margin-left: -100px;
+top: 50%;
+margin-top: -100px;}
+
+.box005 p:nth-child(2){position: absolute;
+width: 200px;
+height: 200px;
+background-color: cornflowerblue;
+right: 50px;
+bottom: 50px;}
+
+/* 글자안에있는 텍스트를 가운데로 보내는법 */
+.box005 p:nth-child(2) span{position: absolute;
+left: 50%;
+top: 50%;}
+
+/* fixed(독립적인 애, 항상 윈도우기준!) */
+.box005 p:nth-child(3){width: 200px;
+    height: 200px;
+    background-color: rgb(42, 221, 57);
+position: fixed;
+bottom: 0;
+right: 0;}
+
+/* z-index 속성 예제 */
+.box006{width: 400px;
+height: 400px;
+background-color: rgb(232, 255, 149);
+position: relative;}
+
+.box006 p:nth-child(1){width: 200px; height: 200px; background-color: red;
+                        position: absolute;
+                    z-index: 4;}
+
+.box006 p:nth-child(2){width: 200px; height: 200px;
+        background-color: yellow;position: absolute;left: 50px;
+        top: 50px;}
+
+.box006 p:nth-child(3){width: 200px; height: 200px;
+            background-color: blue;position: absolute;
+        left: 100px;
+    top: 100px;z-index: -1;}
+    /* -1은 부모자 뒤로 내려간다. */
+
