@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃005</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    <div class="box1">
+        <div class="box1-1">
+            <div class="box11">박스1</div>
+            <div class="box12">박스2</div>
+            <div class="box13">박스3</div>
+            <div class="box14">박스4</div>
+        </div>
+        <div class="box1-2">박스5</div>
+    </div>
+    <div class="box2">박스6</div>
+    <div class="box3">
+        <div class="box3-1">박스7</div>
+        <div class="box3-2">박스8</div>
+        <div class="box3-3">박스9</div>
+        <div class="box3-4">박스10</div>
+    </div>
+    <div class="box4">
+        <div class="box4-1">박스11</div>
+        <div class="box4-2">박스12</div>
+        <div class="box4-3">박스13</div>
+    </div>
+</body>
+
+<style>
+
+/* 부모자 에프터설정 flaot;left를 사용 가로정렬 */
+.box1::after{content: "";
+display: block;
+clear: both;}
+.box1-1{float: left; width: 30%;}
+.box1-2{float: left; width: 70%;}
+
+.box3::after{content: "";
+display: block;
+clear: both;}
+.box3-1{float:left; width: 25%;}
+.box3-2{float:left; width: 25%;}
+.box3-3{float:left; width: 25%;}
+.box3-4{float:left; width: 25%;}
+
+.box4::after{content: "";
+display: block;
+clear: left;}
+.box4 div{float: left;width:33.333%;}
+
+
+
+
+    /* 플랙스기반 가로정렬 */
+    
+/* .box1{display: flex; height: 100%;} */
+/*박스 5번 .box1-2{height: 25%; width: 60%;}해도 되고
+box1번에다가 align-items:flex-start로 해도됨 */
+/* .box1-1{width: 40%;}
+.box1-2{height: 25%; width: 60%;}
+
+.box3{display: flex;}
+.box3-1{width: 25%;}
+.box3-2{width: 25%;}
+.box3-3{width: 25%;}
+.box3-4{width: 25%;}
+
+.box4{display: flex;}
+.box4-1{width: 33.3333%;}
+.box4-2{width: 33.3333%;}
+.box4-3{width: 33.3333%;} */
+</style>
+
+
+
+</html>
