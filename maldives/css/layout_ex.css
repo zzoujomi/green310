@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* 전체설정 */
+
+*{margin: 0; padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: #555;}
+img{border: none; vertical-align: bottom;}
+body{font: 12px/1.6 'Poiret One', cursive; color: #555;}
+
+
+/* 레이아웃 */
+header{
+width: 15%; height: 100%; position: fixed;}
+nav{width: 85%; background-color: #212121;
+height: 35px; margin-left: 15%;}
+section{width: 85%; background-color: #212121; height: 35px; /*백그라운드랑 헤이츠 삭제예정*/ margin-left: 15%;}
+article{float: left;/*왼쪽에서부터 다닥다닥 붙어다녀라*/
+width: 20%; /*최소값 기준으로*/
+height: 260px;}
+
+
+/* article 박스 크기 각자 지정 */
+article:nth-child(1){background-color: #ddd;
+width: 60%;
+height: 520px;}
+article:nth-child(2){background-color: #ccc;
+width: 40%;}
+article:nth-child(3){background-color: #bbb;}
+article:nth-child(4){background-color: #aaa;}
+article:nth-child(5){background-color: #999;}
+article:nth-child(6){background-color: #888;
+width: 40%;}
+article:nth-child(7){background-color: #777;}
+article:nth-child(8){background-color: #666;}
+article:nth-child(9){background-color: #555;
+width: 40%;}
+article:nth-child(10){background-color: #444;}
+article:nth-child(11){background-color: #333;}
+article:nth-child(12){background-color: #222}
+
+
+/* 미디어쿼리구간 ************************************************/
+
+/* 2.480~639까지구간 */
+@media (min-width:480px) and (max-width:639px) {
+    article:nth-child(1){background-color: #ddd;
+        width: 60%;
+        height: 520px;}
+        article:nth-child(2){background-color: #ccc;
+        width: 40%;}
+        article:nth-child(3){background-color: #bbb;}
+        article:nth-child(4){background-color: #aaa; display: none;}
+        article:nth-child(5){background-color: #999;}
+        article:nth-child(6){background-color: #888;
+        width: 66.6666%;}
+        article:nth-child(7){background-color: #777;display: none;}
+        article:nth-child(8){background-color: #666;}
+        article:nth-child(9){background-color: #555;width: 33.3333%;}
+        article:nth-child(10){background-color: #444;display: none;}
+        article:nth-child(11){background-color: #333;}
+        article:nth-child(12){background-color: #222;display: none}
+
+
+
+}
+
+
+
+
+/* 3.640~779까지구간 */
+@media (min-width:640px) and (max-width:779px) {
+
+
+    article:nth-child(1){background-color: #ddd;
+        width: 60%;
+        height: 520px;}
+        article:nth-child(2){background-color: #ccc;
+        width: 40%;}
+        article:nth-child(3){background-color: #bbb;}
+        article:nth-child(4){background-color: #aaa; display: none;}
+        article:nth-child(5){background-color: #999;}
+        article:nth-child(6){background-color: #888;
+        width: 66.6666%;}
+        article:nth-child(7){background-color: #777;display: none;}
+        article:nth-child(8){background-color: #666;}
+        article:nth-child(9){background-color: #555;width: 33.3333%;}
+        article:nth-child(10){background-color: #444;display: none;}
+        article:nth-child(11){background-color: #333;}
+        article:nth-child(12){background-color: #222;display: none}
+
+}
+
+/* 4. 780~1023까지 구간 */
+@media (min-width:780px) and (max-width:1023px) 
+
+{article:nth-child(1){background-color: #ddd;
+    width: 60%;
+    height: 520px;}
+    article:nth-child(2){background-color: #ccc;
+    width: 40%;}
+    article:nth-child(3){background-color: #bbb;}
+    article:nth-child(4){background-color: #aaa; display: none;}
+    article:nth-child(5){background-color: #999;}
+    article:nth-child(6){background-color: #888;
+    width: 66.6666%;}
+    article:nth-child(7){background-color: #777;display: none;}
+    article:nth-child(8){background-color: #666;}
+    article:nth-child(9){background-color: #555;width: 33.3333%;}
+    article:nth-child(10){background-color: #444;display: none;}
+    article:nth-child(11){background-color: #333;}
+    article:nth-child(12){background-color: #222;display: none}
+    
+
+
+}
+
+/* 5. 1024~1279까지 구간 ************************************************/
+@media (min-width:1024px) and (max-width:1279px) {article:nth-child(1){background-color: #ddd;
+    width: 60%;
+    height: 520px;}
+    article:nth-child(2){background-color: #ccc;
+    width: 40%;}
+    article:nth-child(3){background-color: #bbb;}
+    article:nth-child(4){background-color: #aaa;}
+    article:nth-child(5){background-color: #999;}
+    article:nth-child(6){background-color: #888;
+    width: 40%;}
+    article:nth-child(7){background-color: #777;}
+    article:nth-child(8){background-color: #666;}
+    article:nth-child(9){background-color: #555;
+    width: 40%;}
+    article:nth-child(10){background-color: #444;}
+    article:nth-child(11){background-color: #333;}
+    article:nth-child(12){background-color: #222}
+    
+
+}
+
+
+
+
+
+
+
+
+/* 6. 1280~1599까지 구간 *************************************************/
+@media (min-width: 128px) and (max-width:1599px) {
+
+    /* css설정구간 */
+header {position: relative;
+width: 100%; height: 80px;
+}
+nav {width: 100%;
+margin-left: 0;}
+section {width: 100%; margin-left: 0;}
+
+
+}
+
