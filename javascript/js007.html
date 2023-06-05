@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_이벤트</title>
+</head>
+<body>
+    <h1 id="ti1">자바스크립트_이벤트</h1>
+<p>이벤트는 키보드를 누르거나 마우스를 클릭하는 것처럼
+    어떤 현상이 프로그램에 영향을 미치는 것을 말합니다.
+</p>
+<ul>
+    <li id="k1">마우스이벤트 </li>
+    <li id="k2">키보드이벤트</li>
+    <li id="k3">html프레임 이벤트 - 프레임 안에서 움직이는 거 (스크롤바 같은 거)</li>
+    <li id="k4">html입력양식 이벤트 - 텍스트 쓰거나 로그인 할 때</li>
+    <li id="k5">사용자인터페이스이벤트 - 지문인식 같은 거 어플리케이션에서 많이 활용</li>
+    <li id="k6">구조변화이벤트 - 모바일로 변환될 때(미디어쿼리)</li>
+    <li id="k7">터치이벤트 - 클릭해서 드래그로 하는거</li>
+</ul>
+
+<p>작성법<br>
+일반적인방식 : window.onload = function(){실행문}
+</p>
+<p> 설명<br>
+:window는 선택자의 자리, onload는 이벤트속성이라는 이름으로 on을
+제외한 load가 이벤트 이름 또는 이벤트타입이라 불리고,<br>
+이벤트 속성의 넣는 함수를 이벤트 리스너 또는 이벤트 핸들러라고한다.
+</p>
+
+
+<button id="btn">클릭</button>
+<script>
+window.onload = function(){
+const btn = document.getElementById('btn');
+btn.onclick = function(){
+    alert('클릭하셨습니다.')
+};
+
+
+ti1.onmouseenter = function(){
+    ti1.style.background='red'
+}
+
+ti1.onmouseout = function(){
+ti1.style.background="yellow"
+}
+}
+
+k1.onmouseenter = function(){
+k1.style.background="red"
+}
+
+k1.onmouseout = function(){
+k1.style.background="yellow"
+}
+
+k2.onmouseenter = function(){
+k2.style.background="orange"
+}
+
+k2.onmouseout = function(){
+k2.style.background="yellow"
+}
+
+k3.onmouseenter = function(){
+k3.style.background="green"
+}
+
+k3.onmouseout = function(){
+k3.style.background="yellow"
+}
+
+k4.onmouseenter = function(){
+k4.style.background="blue"
+}
+
+k4.onmouseout = function(){
+k4.style.background="yellow"
+}
+
+k5.onmouseenter = function(){
+k5.style.background="pink"
+}
+
+k5.onmouseout = function(){
+k5.style.background="yellow"
+}
+
+k6.onmouseenter = function(){
+k6.style.background="skyblue"
+}
+
+k6.onmouseout = function(){
+k6.style.background="yellow"
+}
+
+k7.onmouseenter = function(){
+k7.style.background="violet"
+}
+
+k7.onmouseout = function(){
+k7.style.background="yellow"
+}
+
+</script>
+
+<h2>추가선택자</h2>
+<p>id값을 매번 html요소에 추가하는데 불편함이 있음
+    getElementById값 대신에 querySelcetor또는 querySelcetorAll이라는
+    객체로 불러낼 수 있다.<br>
+    이때, querySelcetor는 html 태그중 중복요소가 있을시
+    맨 처음에 있는 요소만 부르고,
+    querySelcetorAll은 모든 요소를 부른다.
+</p>
+
+<div id="toggle">
+    <span></span>
+    <ul id="gnb">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+</div>
+
+
+<div id="toggle2">
+    <span></span>
+    <ul id="gnb2">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+#toggle span{width: 40px;
+            height: 40px;
+            background-color: black;
+            display: block;
+            cursor: pointer;}
+
+#toggle span:hover{background-color: red;}
+
+#gnb {width: 100px; background-color: blue;
+        list-style: none;
+        padding: 0; margin: 0;
+        display: none;}
+
+#gnb li {color: #fff; padding: 10px 10px;
+        margin-bottom: 2px; background-color: blue;}
+
+
+</style>
+
+
+
+<style>
+    #toggle2 span{width: 40px;
+                height: 40px;
+                background-color: yellow;
+                display: block;
+                cursor: pointer;}
+    
+    #toggle2 span:hover{background-color: red;}
+    
+    #gnb2 {width: 100px; background-color: blue;
+            list-style: none;
+            padding: 0; margin: 0;
+            display: none;}
+    
+    #gnb2 li {color: #fff; padding: 10px 10px;
+            margin-bottom: 2px; background-color: blue;}
+    
+    
+    </style>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//토글의 span에 클릭을하면 gnb가 나타나라
+let btn = document.querySelector('span'),
+gnb = document.getElementById('gnb'),
+ii = 0
+btn.onclick = function(){
+
+    ii++;
+    if(ii==2)
+    ii=0
+    console.log(ii);
+
+    if(ii==1){
+        gnb.style.display ='block'
+    }else{
+        gnb.style.display = 'none'
+    }
+
+    // if(gnb.style.display = 'block'){
+
+    //     gnb.style.display = 'none'
+
+    // }else{gnb.style.display = 'block'}
+    
+
+}
+
+
+
+
+</script>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+<script>
+//toggle2의 span을 클릭했을 때, gnb2가 나타나라
+
+$('#toggle2>span').click(function(){
+
+$('#gnb2').fadeToggle()
+})
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

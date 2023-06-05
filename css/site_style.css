@@ -48,21 +48,67 @@ height: auto;}
 
 /* snsSet 설정 */
 .snsSet{}
+.snsSet p {background-color: #ddd;
+            font-size: 14px; text-align: center;
+            padding: 10px; margin-bottom: 20px;}
+
+/* 말풍선 모양을 제작할 때 사용하는 제너레이터 
+http://cssarrowplease.com*/
+.snsSet p {
+	position: relative;
+	background: #ddd;
+}
+.snsSet p:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 15px;
+	margin-left: -15px;
+}
+
+
+
+
+
 .snsSet ul{}
 .snsSet li{}
 .snsSet a{display: block; padding: 10px;
             margin-bottom: 10px; font-size: 14px;
-            background-color: #eee; border-radius: 4px;}
-
-
-
-
+            background-color: #eee; border-radius: 4px;
+        color: #fff;}
+.snsSet li:nth-child(1) a {background-color: #00c7f2;}
+.snsSet li:nth-child(2) a {background-color: #1877f2;}
+.snsSet li:nth-child(3) a {background-color: #e1306c;}
+.snsSet i {margin-right: 10px;}
+.snsSet p
 
 
 
 /* 카피라이트설정 */
 .copyright{}
 .copyright p{color: #666; font-size: 14px;}
+
+
+/* summary설정 */
+.summary{}
+.summary a{display: block; background-color: #222;color: #fff; text-align: center;}
+.summary a i{font-size: 38px; display: block; padding-top: 40px; padding-bottom: 40px;}
+.fa-database{background-color: #bfbd13;}
+.fa-bar-chart{background-color: #c58839;}
+.fa-clock-o{background-color: #859f46;}
+.summary h2{font-size: 20px; font-weight: normal;  padding-top: 5px; padding-bottom: 5px;}
+.summary a p{background-color: #524e3c; padding-top: 15px; padding-bottom: 15px;}
+
+
+
+
 
 
 
@@ -74,7 +120,7 @@ height: auto;}
 .boxA{padding-top: 20px; padding-bottom: 10px;}
 .box4{padding-top: 20px; padding-bottom: 20px;}
 .box6{padding-top: 20px;}
-
+.box6-1, .box6-2, .box6-3{padding-bottom: 10px;}
 
 
 /* 박스 왼 오른쪽 설정 */
@@ -91,6 +137,22 @@ height: auto;}
 
     
 }
+/* 767px 이하구간설정 */
+@media(max-width:767px) {
+
+    /* 메뉴토글설정 */
+    .menu{display: none;}
+    .menuBtn{position: absolute;right: 15px; top: 15px;
+                padding: 6px 12px; border: solid 1px #aaa; border-radius: 5px;
+                background-color: #FFF;}
+    .menuBtn i{color: #888; font-size: 18px;}
+
+
+}
+
+
+
+
 
 /* 768px 이상구간설정 **************************************/
 @media(min-width:768px) {
@@ -102,11 +164,12 @@ height: auto;}
     .boxA>div {}
 
     /* 메뉴설정 */
-.menu{}
+.menu{display: block !important;}
 .menu ul{display: flex;}
 .menu li{}
 .menu li a{}
 .menu li a:hover{}
+.menuBtn{display: none;}
 
 /* 공지사항, snsset 가로정렬 */
 

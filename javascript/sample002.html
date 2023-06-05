@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0; padding:0 }
+        ul {overflow: hidden;}
+       
+       
+        #wrap1 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto; 
+         list-style:none;
+         border: 5px solid #000;
+         }
+        #wrap1 ul li { width:200px; 
+         height:250px; position:absolute; top:100%;
+         opacity: 0.5 }
+        #wrap1 ul li:nth-child(1) {top: 0} 
+        #wrap2 {margin-top: 20px;
+         }
+        #wrap2 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000 }
+        #wrap2 ul li { width:200px; 
+         height:250px; position:absolute; top:0; left: 100%;
+         opacity: 0.5 }
+        #wrap2 ul li:nth-child(1) {left: 0} 
+        #wrap3 {margin-top: 20px;
+         
+        }
+        #wrap3 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000 }
+        #wrap3 ul li { width:200px; 
+         height:250px; position:absolute; top:-100%; left: 0%;
+         opacity: 0.5 }
+        #wrap3 ul li:nth-child(1) {top:0 
+        }
+       
+        #wrap4 {margin-top: 20px;
+       
+        }
+        #wrap4 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000 }
+        #wrap4 ul li { width:200px; 
+         height:250px; position:absolute; top:0; left: -100%;
+         opacity: 0.5 }
+        #wrap4 ul li:nth-child(1) {left: 0}
+       
+       
+        #wrap5 {margin-top: 20px;
+        }
+        #wrap5 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000 }
+        #wrap5 ul li { width:200px; 
+         height:250px; position:absolute; top:0; left: 0%;
+         opacity: 0 }
+        #wrap5 ul li:nth-child(1) {opacity: 1}
+       
+       
+       </style>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+    $(document).ready(function(){
+let i = 0;
+
+
+
+    })
+</script>
+
+</head>
+
+<body>
+    
+
+    <div id="wrap1">
+        <ul>
+         <li class="image1"><img src="img/1.jpg" alt="1" /></li>
+         <li class="image2"><img src="img/2.jpg" alt="2" /></li>
+         <li class="image3"><img src="img/3.jpg" alt="3" /></li>
+        </ul>
+       </div>
+
+
+
+    
+</body>
+</html>
